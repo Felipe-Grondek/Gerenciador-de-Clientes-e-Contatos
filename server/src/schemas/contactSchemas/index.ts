@@ -7,6 +7,14 @@ const createContactSchema = yup.object().shape({
     phone: yup.string().max(11).required()
 });
 
+const updateContactSchema = yup.object().shape({
+    email: yup.string().email().max(127).notRequired(),
+    firstName: yup.string().max(32).notRequired(),
+    lastName: yup.string().max(32).notRequired(), 
+    phone: yup.string().max(11).notRequired()
+});
+
 export {
     createContactSchema,
+    updateContactSchema,
 }

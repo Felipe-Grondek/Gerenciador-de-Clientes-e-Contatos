@@ -1,4 +1,4 @@
-import { createContactSchema } from "./contactSchemas";
+import { createContactSchema, updateContactSchema } from "./contactSchemas";
 import { createSessionSchema, userReturnSchema } from "./sessionSchemas";
 import { createUserSchema, updateUserSchema, usersListReturnSchema } from "./userSchemas";
 
@@ -9,4 +9,5 @@ export {
     usersListReturnSchema,
     updateUserSchema,
     createContactSchema,
+    updateContactSchema,
 };

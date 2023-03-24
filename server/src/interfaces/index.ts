@@ -1,4 +1,4 @@
 import { IUserLogin, IUser, ICreateUser, IUserLoginResponse, IUpdateUser } from "./users";
-import { ICreateContact } from "./contacts";
+import { ICreateContact, IUpdateContact } from "./contacts";
 
-export { IUserLogin, IUser, ICreateUser, IUserLoginResponse, IUpdateUser, ICreateContact };
+export { IUserLogin, IUser, ICreateUser, IUserLoginResponse, IUpdateUser, ICreateContact, IUpdateContact };
