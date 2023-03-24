@@ -6,14 +6,12 @@ const createSessionSchema = yup.object().shape({
 });
 
 const userReturnSchema = yup.object().shape({
-    updatedAt: yup.date(),
-    createdAt: yup.date(),
-    secondaryPhone: yup.string(),
-    primaryPhone: yup.string(),
+    updated_at: yup.date(),
+    created_at: yup.date(),
+    phone: yup.string(),
     lastName: yup.string(),
     firstName: yup.string(),
-    secondaryEmail: yup.string().email(),
-    primaryEmail: yup.string().email(),
+    email: yup.string().email(),
     id: yup.string().uuid(),
 })
 

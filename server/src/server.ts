@@ -13,3 +13,5 @@ const prisma = new PrismaClient();
         console.log("Server running on http://localhost:3001")
     })
 })()
+
+export { prisma };

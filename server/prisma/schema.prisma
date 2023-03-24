@@ -9,13 +9,11 @@ datasource db {
 
 model User {
   id String @id @default(uuid())
-  primaryEmail String @db.VarChar(127)
-  secondaryEmail String? @db.VarChar(127)
+  email String @db.VarChar(127) @unique
   password String @db.VarChar(127)
   firstName String @db.VarChar(32)
   lastName String @db.VarChar(32)
-  primaryPhone String @db.VarChar(11) 
-  secondaryPhone String? @db.VarChar(11) 
+  phone String @unique @db.VarChar(11) 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
   contacts Contact[]
@@ -25,12 +23,10 @@ model User {
 
 model Contact {
   id String @id @default(uuid())
-  primaryEmail String @db.VarChar(127)
-  secondaryEmail String? @db.VarChar(127)
+  email String @db.VarChar(127)
   firstName String @db.VarChar(32)
   lastName String @db.VarChar(32)
-  primaryPhone String @db.VarChar(11) 
-  secondaryPhone String? @db.VarChar(11) 
+  phone String @db.VarChar(11) 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
   User User @relation(fields: [userId], references: [id])

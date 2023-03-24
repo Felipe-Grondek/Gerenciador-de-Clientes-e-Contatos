@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { createSessionService } from "../../services";
+import { createSessionService } from "../../../services";
 
 
 const createSessionController = async (req: Request, res: Response) => {

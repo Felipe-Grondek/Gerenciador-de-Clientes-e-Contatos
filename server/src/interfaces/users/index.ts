@@ -4,13 +4,11 @@ export interface IUserLogin {
 }
 
 export interface ICreateUser {
-    primaryEmail: string;
-    secondaryEmail?: string;
+    email: string;
     password: string;
     firstName: string;
     lastName: string;
-    primaryPhone: string;
-    secondaryPhone?: string;
+    phone: string;
 }
 
 export interface IUser extends ICreateUser {
@@ -21,4 +19,11 @@ export interface IUser extends ICreateUser {
 export interface IUserLoginResponse {
     token: string;
     user: IUser;
+}
+
+export interface IUpdateUser {
+    firstName?: string;
+    lastName?: string;
+    password?: string;
+    phone?: string;
 }

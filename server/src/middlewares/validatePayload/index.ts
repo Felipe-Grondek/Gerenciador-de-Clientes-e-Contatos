@@ -14,7 +14,7 @@ const validatePayloadMiddleware = (schema: yup.AnyObject) => {
             return next();
         } catch (error) {
             if(error instanceof yup.ValidationError) {
-                throw new AppError(error.message, 400)
+                throw new AppError(error.errors[0], 400)
             }
         }
     }
