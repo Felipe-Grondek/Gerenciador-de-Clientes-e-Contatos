@@ -21,8 +21,17 @@ export default function EditContactModal() {
                     <button onClick={() => closeEditModal()} type="button">x</button>
                 </div>
                 <div className="formBody">
-                    <Label htmlFor="title">Nome</Label>
-                    <Input readOnly id="title" placeholder="Nome do Contato" value={cardInfo?.firstName} />
+                    <Label htmlFor="firstName">Nome</Label>
+                    <Input id="firstName" placeholder="Nome do Contato" defaultValue={cardInfo?.firstName} {...register("firstName")} />
+
+                    <Label htmlFor="lastName">Sobrenome</Label>
+                    <Input id="lastName" placeholder="Sobrenome do Contato" defaultValue={cardInfo?.lastName} {...register("lastName")} />
+
+                    <Label htmlFor="email">Email</Label>
+                    <Input type={"email"} id="email" placeholder="Email do Contato" defaultValue={cardInfo?.email} {...register("email")} />
+
+                    <Label htmlFor="phone">Telefone</Label>
+                    <Input id="phone" placeholder="Telefone do Contato" defaultValue={cardInfo?.phone} {...register("phone")} />
 
                     <input type="text" hidden {...register("id", {value: cardInfo?.id})}/>
 

@@ -14,8 +14,9 @@ export default function ContactCard({firstName, lastName, email, phone, id}: iCo
             <div className="clickContainer"
                 onClick={() => openEditModal({email, firstName, lastName, phone, id})}
             >
-                <h3>{firstName}</h3>
+                <h3>{firstName} {lastName}</h3>
                 <h4>{email}</h4>
+                <h4>{phone}</h4>
             </div>
             <div className="cardContainer">
                 <button onClick={() => removeContact(id)}><FaRegTrashAlt className="trashIcon" /></button>

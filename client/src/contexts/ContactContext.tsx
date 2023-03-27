@@ -80,7 +80,7 @@ export default function ContactContextProvider({children}: iContactContextProps)
         setLoading(true)
         const {id, firstName, lastName, email, phone} = dataForm
         try {
-            await instance.put(`/contacts/${id}`, {firstName, lastName, email, phone})
+            await instance.patch(`/contacts/${id}`, {firstName, lastName, email, phone})
             setUpdateList(`${id}, ${firstName} ${lastName}`)
             ToastSucess("Contato atualizado com sucesso!")
         } catch (error) {
