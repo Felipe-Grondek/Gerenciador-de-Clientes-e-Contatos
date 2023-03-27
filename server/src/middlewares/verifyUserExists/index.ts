@@ -6,7 +6,8 @@ const verifyUserExistsMiddleware = async (req: Request, res: Response, next: Nex
     const user = await prisma.user.findUnique({
         where: {
             email: req.validatedBody.email
-        }
+        },
+        include: {contacts: true}
     });
 
     if(!user) {

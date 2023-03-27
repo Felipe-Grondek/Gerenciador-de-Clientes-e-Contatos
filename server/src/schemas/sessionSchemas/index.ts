@@ -6,6 +6,7 @@ const createSessionSchema = yup.object().shape({
 });
 
 const userReturnSchema = yup.object().shape({
+    contacts: yup.array(),
     updated_at: yup.date(),
     created_at: yup.date(),
     phone: yup.string(),

@@ -6,6 +6,7 @@ import { createSessionController } from "./users/createSession";
 import { createUserController } from "./users/createUser";
 import { deleteUserController } from "./users/deleteUser";
 import { getAllUsersController } from "./users/getAllUsers";
+import { profileController } from "./users/profileSession";
 import { updateUserController } from "./users/updateUser";
 
 
@@ -19,4 +20,5 @@ export {
     listContactsController,
     deleteContactController,
     updateContactController,
+    profileController,
 };

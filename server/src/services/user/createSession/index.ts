@@ -24,7 +24,7 @@ const createSessionService = async (payload: IUserLogin, userDb: User) => {
         stripUnknown: true,
     }
     );
-
+    
     return { token, user: { ...user } };
 };
 
