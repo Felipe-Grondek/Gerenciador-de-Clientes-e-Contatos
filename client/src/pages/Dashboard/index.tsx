@@ -45,8 +45,9 @@ export default function Dashboard() {
             </NavStyled>
             <Header>
                 <Container>
-                    <h2>Olá, {user?.firstName}</h2>
+                    <h2>Olá, {user?.firstName} {user?.lastName}</h2>
                     <h3>{user?.email}</h3>
+                    <h3>{user?.phone}</h3>
                 </Container>
             </Header>
             <Main>
