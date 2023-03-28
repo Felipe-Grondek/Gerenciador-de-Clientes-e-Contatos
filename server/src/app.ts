@@ -10,6 +10,7 @@ import { profileRoute } from "./routes/profile";
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.use("/users", userRoutes);
 app.use("/login", sessionRoute);
@@ -17,6 +18,5 @@ app.use("/contacts", contactRoutes);
 app.use("/profile", profileRoute);
 
 app.use(handleAppError);
-app.use(cors());
 
 export default app;
