@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node-dev --ignore-watch node_modules src/server.ts",
     "build": "tsc",
-    "prisma": "prisma migrate dev"
+    "prisma": "prisma migrate dev",
+    "vercel-build": "npx prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
